@@ -14,6 +14,52 @@ namespace AutiAssist_MobileApp.ViewModels
         Random random;
         List<string> coloursList;
         List<Color> coloursListHex;
+
+        private double score;
+
+        public Double Score
+        {
+            get => score;
+            set => SetProperty(ref score, value);
+        }
+
+        private void CalculateScore()
+        {
+            int correctCount = 0;
+
+            if (CircleOneColourOneAnswer)
+            {
+                correctCount++;
+            }
+
+            if (CircleTwoColourOneAnswer)
+            {
+                correctCount++;
+            }
+
+            if (CircleThreeColourOneAnswer)
+            {
+                correctCount++;
+            }
+
+            if (CircleOneColourTwoAnswer)
+            {
+                correctCount++;
+            }
+
+            if (CircleTwoColourTwoAnswer)
+            {
+                correctCount++;
+            }
+
+            if (CircleThreeColourTwoAnswer) {
+
+                correctCount++;
+            }
+
+            Score = correctCount / 6.0 * 100.00;
+        }
+
         public List<string> ColoursList
         {
             get
@@ -456,6 +502,8 @@ namespace AutiAssist_MobileApp.ViewModels
 
         private async void OnNextLevelClicked(object obj)
         {
+            CalculateScore();
+            await Application.Current.MainPage.DisplayAlert("Success", $"You have scored {Score}%", "OK");
             await Shell.Current.GoToAsync($"..");
         }
         #endregion

@@ -257,7 +257,7 @@
                     Grid.Column="5"
                     Command="{Binding NextLevelCommand}"
                     HorizontalOptions="Start"
-                    IsEnabled="{Binding NextButtonSwitch}"
+                    IsEnabled="True"
                     Text="Finish"
                     VerticalOptions="Center" />
             </Grid>
