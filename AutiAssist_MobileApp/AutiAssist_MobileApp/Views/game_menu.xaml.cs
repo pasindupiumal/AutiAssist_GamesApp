@@ -31,9 +31,33 @@ namespace AutiAssist_MobileApp.Views
         }
 
         // Select Answer game button
-        private void SelectAnswer_Btn(object sender, EventArgs e)
+        private async void SelectAnswer_Btn(object sender, EventArgs e)
         {
+            if (userAgeCat == 1)
+            {
+                //Navigation.PushAsync(new puzzle_A01_L01());
+                Console.WriteLine("Preferences.Get : " + userAgeCat);
+                await Shell.Current.GoToAsync($"{nameof(PuzzleTwoOnePage)}");
+            }
 
+            else if (userAgeCat == 2)
+            {
+                //Navigation.PushAsync(new puzzle_A01_L02());
+                Console.WriteLine("Preferences.Get : " + userAgeCat);
+                await Shell.Current.GoToAsync($"{nameof(PuzzleTwoTwoPage)}");
+            }
+
+            else if (userAgeCat == 3)
+            {
+                //Navigation.PushAsync(new puzzle_A01_L03());
+                Console.WriteLine("Preferences.Get : " + userAgeCat);
+                await Shell.Current.GoToAsync($"{nameof(PuzzleTwoThreePage)}");
+            }
+
+            else
+            {
+
+            }
         }
 
         // Jigsaw Puzzle game button

@@ -256,4 +256,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\two.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tik.png" />
+  </ItemGroup>
 </Project>

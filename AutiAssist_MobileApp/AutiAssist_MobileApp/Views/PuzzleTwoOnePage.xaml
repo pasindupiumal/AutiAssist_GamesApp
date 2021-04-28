@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AutiAssist_MobileApp.Views.PuzzleTwoOnePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:AutiAssist_MobileApp.ViewModels"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:PuzzleTwoOneViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid ColumnSpacing="30" RowSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="4"
+                    Padding="20"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Select the correct name for the following colours"
+                    VerticalOptions="CenterAndExpand" />
+                <!--<Image
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Aspect="AspectFit"
+                    BackgroundColor="{Binding CircleOne}" />-->
+                <!--<Image
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Aspect="AspectFit"
+                    BackgroundColor="{Binding CircleTwo}" />
+                <Image
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Aspect="AspectFit"
+                    BackgroundColor="{Binding CircleThree}" />-->
+                <Frame
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    BackgroundColor="{Binding CircleOne}"
+                    BorderColor="Black"
+                    CornerRadius="10"
+                    HasShadow="True" />
+                <Frame
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    BackgroundColor="{Binding CircleTwo}"
+                    BorderColor="Black"
+                    CornerRadius="10"
+                    HasShadow="True" />
+                <Frame
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    BackgroundColor="{Binding CircleThree}"
+                    BorderColor="Black"
+                    CornerRadius="10"
+                    HasShadow="True" />
+                <Picker
+                    x:Name="CircleOne"
+                    Title="Select Name"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    FontAttributes="Italic"
+                    FontSize="Small"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    ItemsSource="{Binding ColoursList}"
+                    SelectedItem="{Binding CircleOneSelectedString, Mode=TwoWay}"
+                    VerticalOptions="CenterAndExpand"
+                    VerticalTextAlignment="Center">
+                    <Picker.Behaviors>
+                        <xct:EventToCommandBehavior
+                            Command="{Binding CircleOneSelectedCommand}"
+                            CommandParameter="{Binding Source={x:Reference CircleOne}, Path=SelectedIndex}"
+                            EventName="SelectedIndexChanged" />
+                    </Picker.Behaviors>
+                </Picker>
+                <Picker
+                    x:Name="CircleTwo"
+                    Title="Select Name"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    FontAttributes="Italic"
+                    FontSize="Small"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    ItemsSource="{Binding ColoursList}"
+                    SelectedItem="{Binding CircleTwoSelectedString, Mode=TwoWay}"
+                    VerticalOptions="CenterAndExpand"
+                    VerticalTextAlignment="Center">
+                    <Picker.Behaviors>
+                        <xct:EventToCommandBehavior
+                            Command="{Binding CircleTwoSelectedCommand}"
+                            CommandParameter="{Binding Source={x:Reference CircleTwo}, Path=SelectedIndex}"
+                            EventName="SelectedIndexChanged" />
+                    </Picker.Behaviors>
+                </Picker>
+                <Picker
+                    x:Name="CircleThree"
+                    Title="Select Name"
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    FontAttributes="Italic"
+                    FontSize="Small"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    ItemsSource="{Binding ColoursList}"
+                    SelectedItem="{Binding CircleThreeSelectedString, Mode=TwoWay}"
+                    VerticalOptions="CenterAndExpand"
+                    VerticalTextAlignment="Center">
+                    <Picker.Behaviors>
+                        <xct:EventToCommandBehavior
+                            Command="{Binding CircleThreeSelectedCommand}"
+                            CommandParameter="{Binding Source={x:Reference CircleThree}, Path=SelectedIndex}"
+                            EventName="SelectedIndexChanged" />
+                    </Picker.Behaviors>
+                </Picker>
+                <Image
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    Aspect="AspectFit"
+                    HorizontalOptions="Center"
+                    IsVisible="{Binding CircleOneTikSwitch}"
+                    Source="Tik"
+                    VerticalOptions="Center" />
+                <Image
+                    Grid.Row="2"
+                    Grid.Column="3"
+                    Aspect="AspectFit"
+                    HorizontalOptions="Center"
+                    IsVisible="{Binding CircleTwoTikSwitch}"
+                    Source="Tik"
+                    VerticalOptions="Center" />
+                <Image
+                    Grid.Row="3"
+                    Grid.Column="3"
+                    Aspect="AspectFit"
+                    HorizontalOptions="Center"
+                    IsVisible="{Binding CircleThreeTikSwitch}"
+                    Source="Tik"
+                    VerticalOptions="Center" />
+                <Image
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    Aspect="AspectFit"
+                    HorizontalOptions="Center"
+                    IsVisible="{Binding CircleOneCrossSwitch}"
+                    Source="cross"
+                    VerticalOptions="Center" />
+                <Image
+                    Grid.Row="2"
+                    Grid.Column="3"
+                    Aspect="AspectFit"
+                    HorizontalOptions="Center"
+                    IsVisible="{Binding CircleTwoCrossSwitch}"
+                    Source="cross"
+                    VerticalOptions="Center" />
+                <Image
+                    Grid.Row="3"
+                    Grid.Column="3"
+                    Aspect="AspectFit"
+                    HorizontalOptions="Center"
+                    IsVisible="{Binding CircleThreeCrossSwitch}"
+                    Source="cross"
+                    VerticalOptions="Center" />
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="4"
+                    Command="{Binding ShuffleCommand}"
+                    HorizontalOptions="Center"
+                    Text="Shuffle"
+                    VerticalOptions="Center" />
+                <Button
+                    Grid.Row="2"
+                    Grid.Column="4"
+                    Command="{Binding NextLevelCommand}"
+                    HorizontalOptions="Center"
+                    IsEnabled="{Binding NextButtonSwitch}"
+                    Text="Finish"
+                    VerticalOptions="Center" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
