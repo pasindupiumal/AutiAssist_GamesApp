@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AutiAssist_MobileApp.Views.LoginPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:AutiAssist_MobileApp.ViewModels"
+    Shell.NavBarIsVisible="False">
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowSpacing="{OnPlatform iOS=25, Android=18}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90" />
+                    <!--    -->
+                    <RowDefinition Height="Auto" />
+                    <!--  1  -->
+                    <RowDefinition Height="Auto" />
+                    <!--  2  -->
+                    <RowDefinition Height="Auto" />
+                    <!--  3  -->
+                    <RowDefinition Height="Auto" />
+                    <!--  4  -->
+                    <RowDefinition Height="Auto" />
+                    <!--  5  -->
+                    <RowDefinition Height="Auto" />
+                    <!--  6  -->
+                    <RowDefinition Height="Auto" />
+                    <!--  8  -->
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <StackLayout
+                    Grid.Row="2"
+                    Margin="0,0,0,10"
+                    HorizontalOptions="Center"
+                    Orientation="Vertical">
+                    <Label
+                        Margin="0,0,0,5"
+                        FontAttributes="Bold"
+                        FontSize="26"
+                        HorizontalOptions="Center"
+                        Text="Welcome Back"
+                        TextColor="{OnPlatform Android=Black}"
+                        WidthRequest="300" />
+                    <Label
+                        FontSize="15"
+                        Text="Sign in to continue"
+                        TextColor="Black"
+                        WidthRequest="300" />
+                </StackLayout>
+                <StackLayout
+                    Grid.Row="3"
+                    HorizontalOptions="Center"
+                    Orientation="Vertical"
+                    WidthRequest="{OnPlatform iOS=300,
+                                              Android=300}">
+                    <Label
+                        FontSize="{OnPlatform Android=13}"
+                        Text="Username"
+                        TextColor="Black" />
+                    <Frame
+                        Padding="{OnPlatform Android=8,
+                                             iOS=0}"
+                        CornerRadius="{OnPlatform Android=7}"
+                        HasShadow="{OnPlatform Android=true,
+                                               iOS=false}">
+                        <Entry
+                            FontSize="{OnPlatform Android=15,
+                                                  iOS=16}"
+                            IsEnabled="{Binding IsNotBusy}"
+                            Keyboard="Email"
+                            MaxLength="25"
+                            Placeholder="stephenduff"
+                            Text="{Binding Username, Mode=TwoWay}" />
+                    </Frame>
+                </StackLayout>
+                <StackLayout
+                    Grid.Row="4"
+                    HorizontalOptions="Center"
+                    Orientation="Vertical"
+                    WidthRequest="300">
+                    <StackLayout
+                        Padding="0"
+                        Orientation="Horizontal"
+                        VerticalOptions="Center">
+                        <Label
+                            FontSize="{OnPlatform Android=13}"
+                            Text="Password"
+                            TextColor="Black"
+                            VerticalOptions="Center"
+                            WidthRequest="150" />
+                        <Button
+                            x:Name="ForgetPassword"
+                            Padding="0"
+                            BackgroundColor="White"
+                            FontSize="{OnPlatform Android=13}"
+                            HeightRequest="30"
+                            HorizontalOptions="End"
+                            IsEnabled="{Binding IsNotBusy}"
+                            Text="¿Forgot password?"
+                            TextColor="Black"
+                            WidthRequest="150" />
+                    </StackLayout>
+                    <Frame
+                        Padding="{OnPlatform Android=8,
+                                             iOS=0}"
+                        CornerRadius="{OnPlatform Android=7}"
+                        HasShadow="{OnPlatform Android=true,
+                                               iOS=false}">
+                        <Entry
+                            FontSize="{OnPlatform Android=15,
+                                                  iOS=16}"
+                            IsEnabled="{Binding IsNotBusy}"
+                            IsPassword="True"
+                            MaxLength="25"
+                            Placeholder="******************"
+                            Text="{Binding Password, Mode=TwoWay}" />
+                    </Frame>
+                </StackLayout>
+                <StackLayout
+                    Grid.Row="5"
+                    Padding="0"
+                    HorizontalOptions="Center">
+                    <ActivityIndicator
+                        IsRunning="{Binding IsBusy}"
+                        IsVisible="{Binding IsBusy}"
+                        Scale="0.8"
+                        Color="Blue" />
+                </StackLayout>
+                <StackLayout
+                    Grid.Row="6"
+                    HorizontalOptions="Center"
+                    Orientation="Vertical">
+                    <Button
+                        BackgroundColor="#fcfcfc"
+                        BorderColor="#f2f2f2"
+                        BorderWidth="1.5"
+                        Command="{Binding LoginCommand}"
+                        Font="Montserrat-Medium.otf"
+                        FontSize="{OnPlatform Android=15}"
+                        HeightRequest="50"
+                        IsEnabled="{Binding IsNotBusy}"
+                        Text="Log in"
+                        TextColor="Black"
+                        WidthRequest="300" />
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

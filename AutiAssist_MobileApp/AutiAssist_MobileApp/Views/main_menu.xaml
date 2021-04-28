@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AutiAssist_MobileApp.Views.main_menu"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Age Selection">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="55" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                Text="WELCOME TO ANIMALLAND PUZZLE"
+                TextColor="Blue"
+                VerticalTextAlignment="Center" />
+
+            <Entry
+                x:Name="ageEntry"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HeightRequest="200"
+                HorizontalOptions="CenterAndExpand"
+                Keyboard="Numeric"
+                Placeholder="Age"
+                VerticalOptions="Center" />
+
+            <Button
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                BackgroundColor="LightSeaGreen"
+                Clicked="age_submit_button"
+                CornerRadius="50"
+                FontSize="Large"
+                MinimumWidthRequest="20"
+                Text="Submit" />
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

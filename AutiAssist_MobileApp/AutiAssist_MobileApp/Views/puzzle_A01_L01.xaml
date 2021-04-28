@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AutiAssist_MobileApp.Views.puzzle_A01_L01"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="170" />
+                <RowDefinition Height="170" />
+                <RowDefinition Height="170" />
+                <RowDefinition Height="55" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!--  Progress Bar  -->
+            <ProgressBar
+                x:Name="progressBar"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Margin="0,5,0,3"
+                BackgroundColor="LightBlue"
+                HeightRequest="50"
+                Progress="0.0"
+                ProgressColor="HotPink"
+                ScaleY="5"
+                WidthRequest="200" />
+
+
+            <!--  Puzzle Boxes  -->
+            <Image
+                x:Name="img01"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="1"
+                Aspect="Fill"
+                BackgroundColor="DarkGray">
+                <Image.GestureRecognizers>
+
+                    <TapGestureRecognizer Tapped="Tapped_img01" />
+
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image
+                x:Name="img02"
+                Grid.Row="1"
+                Grid.Column="1"
+                Grid.ColumnSpan="1"
+                Aspect="Fill"
+                BackgroundColor="DarkGray">
+                <Image.GestureRecognizers>
+
+                    <TapGestureRecognizer Tapped="Tapped_img02" />
+
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image
+                x:Name="img03"
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="1"
+                Aspect="Fill"
+                BackgroundColor="DarkGray">
+                <Image.GestureRecognizers>
+
+                    <TapGestureRecognizer Tapped="Tapped_img03" />
+
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image
+                x:Name="img04"
+                Grid.Row="2"
+                Grid.Column="1"
+                Grid.ColumnSpan="1"
+                Aspect="Fill"
+                BackgroundColor="DarkGray">
+                <Image.GestureRecognizers>
+
+                    <TapGestureRecognizer Tapped="Tapped_img04" />
+
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image
+                x:Name="img05"
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="1"
+                Aspect="Fill"
+                BackgroundColor="DarkGray">
+                <Image.GestureRecognizers>
+
+                    <TapGestureRecognizer Tapped="Tapped_img05" />
+
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image
+                x:Name="img06"
+                Grid.Row="3"
+                Grid.Column="1"
+                Grid.ColumnSpan="1"
+                Aspect="Fill"
+                BackgroundColor="DarkGray">
+                <Image.GestureRecognizers>
+
+                    <TapGestureRecognizer Tapped="Tapped_img06" />
+
+                </Image.GestureRecognizers>
+            </Image>
+
+
+            <!--  Clickable Buttons  -->
+            <Button
+                Grid.Row="4"
+                Grid.Column="1"
+                Margin="10,10,10,0"
+                BackgroundColor="DeepSkyBlue"
+                Clicked="Finish_Clicked"
+                Text="FINISH" />
+            <Button
+                Grid.Row="4"
+                Grid.Column="0"
+                Margin="10,10,10,0"
+                BackgroundColor="LimeGreen"
+                Clicked="Shuffle_Clicked"
+                Text="SHUFFLE" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
