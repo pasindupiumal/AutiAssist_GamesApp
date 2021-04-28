@@ -142,4 +142,118 @@
       <Name>AutiAssist_MobileApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ele01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ele02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ele03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ele04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ele05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ele06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ele07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ele08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ele09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\five.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\four.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hse01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hse02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hse03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hse04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hse05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hse06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hse07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hse08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hse09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hse10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hse11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hse12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hse13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hse14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hse15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hse16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rabbit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Rfive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Rfour.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Rone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Rsix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Rthree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Rtwo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\six.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\three.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\two.png" />
+  </ItemGroup>
 </Project>

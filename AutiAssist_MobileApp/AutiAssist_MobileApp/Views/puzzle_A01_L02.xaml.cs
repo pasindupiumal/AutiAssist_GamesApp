@@ -193,7 +193,7 @@ namespace AutiAssist_MobileApp.Views
                 await OnAlertYesNoClicked(9, completness, "LEVEL COMPLETED!", "Would you like to play again?", "Yes", "No");
             }
 
-            Console.WriteLine(completness);
+            Console.WriteLine("completness : " + completness);
         }
         #endregion
 
@@ -248,6 +248,7 @@ namespace AutiAssist_MobileApp.Views
         #region PostResults
         void PostResults(int complete)
         {
+            Console.WriteLine("FinalScore : " + complete);
             activityResult = complete;
         }
         #endregion
